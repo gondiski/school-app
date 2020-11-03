@@ -10,13 +10,14 @@
     Student.create(
         full_name: Faker::Name.name,
         email: Faker::Internet.free_email,
-        time_preference: ['Part Time', 'Full Time'].sample
+        time_preference: ['Part Time', 'Full Time'].sample,
+        course_id: rand(1..20)
     )
 end
 
-20.times do
-    Course.create(
-        name: Faker::ProgrammingLanguage.name,
-        description: Faker::Lorem.paragraphs(number: 1) 
-    )
-end
+# 20.times do
+#     Course.create(
+#         name: Faker::ProgrammingLanguage.name,
+#         description: Faker::Lorem.paragraphs(number: 1) 
+#     )
+# end
