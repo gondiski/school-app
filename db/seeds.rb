@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# time_set = ['Part Time', 'Full Time']
+100.times do
+    Student.create(
+        full_name: Faker::Name.name,
+        email: Faker::Internet.free_email,
+        time_preference: ['Part Time', 'Full Time'].sample
+    )
+end
