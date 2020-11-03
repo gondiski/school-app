@@ -13,3 +13,10 @@
         time_preference: ['Part Time', 'Full Time'].sample
     )
 end
+
+20.times do
+    Course.create(
+        name: Faker::ProgrammingLanguage.name,
+        description: Faker::Lorem.paragraphs(number: 1) 
+    )
+end
